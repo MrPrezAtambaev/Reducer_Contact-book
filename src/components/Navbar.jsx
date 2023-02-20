@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
-import { indigo } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import { createTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
@@ -51,14 +50,16 @@ export default function Navbar() {
               ContactBook
             </Link>
           </Typography>
-          <Button
-            theme={indigoTheme}
-            variant="contained"
-            color="secondary"
-            onClick={handleTop}
-          >
-            Add new contact
-          </Button>
+          <Link to="/add" style={{ textDecoration: "none", color: "inherit" }}>
+            <Button
+              theme={indigoTheme}
+              variant="contained"
+              color="secondary"
+              onClick={handleTop}
+            >
+              Add new contact
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>

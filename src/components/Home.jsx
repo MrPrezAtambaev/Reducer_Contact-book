@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { indigo } from "@mui/material/colors";
-import AddContact from "./AddContact";
+// import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 
 const Home = () => {
@@ -10,9 +10,6 @@ const Home = () => {
     fontWeight: "100",
     color: indigo[400],
     fontSize: "2em",
-    "&:hover": {
-      color: indigo[300],
-    },
   };
 
   return (
@@ -21,7 +18,7 @@ const Home = () => {
         <Typography component="div" variant="h1" sx={homePageStyles}>
           Contacts
         </Typography>
-        <AddContact />
+        {/* <AddContact /> */}
       </Box>
       <ContactList />
     </Box>

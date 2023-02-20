@@ -56,15 +56,15 @@ const ContactContextProvider = ({ children }) => {
     getContacts();
   };
 
-  const handleTop = () => {
-    if (top) {
-      setTop(0);
-    } else {
-      setTop("-100%");
-    }
-  };
+  // const handleTop = () => {
+  //   if (top) {
+  //     setTop("-100%");
+  //   } else {
+  //     setTop("0");
+  //   }
+  // };
 
-  const [top, setTop] = useState("-100%");
+  // const [top, setTop] = useState("-100%");
 
   return (
     <contactContext.Provider
@@ -74,10 +74,10 @@ const ContactContextProvider = ({ children }) => {
         deleteContact: deleteContact,
         editContact: editContact,
         saveContact: saveContact,
-        handleTop: handleTop,
+        // handleTop: handleTop,
         contactToEdit: state.contactToEdit,
         contacts: state.contacts,
-        top: top,
+        // top: top,
       }}
     >
       {children}

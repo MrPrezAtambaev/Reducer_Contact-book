@@ -1,11 +1,13 @@
 import { Alert, Box, Button, createTheme, TextField } from "@mui/material";
 import React from "react";
-import { green, red, blue } from "@mui/material/colors";
+import { green, red } from "@mui/material/colors";
 import { useContext } from "react";
 import { contactContext } from "../ContactContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddContact = () => {
+  const navigate = useNavigate();
   const indigoTheme = createTheme({
     palette: {
       primary: {
@@ -59,13 +61,8 @@ const AddContact = () => {
 
   const inpsStyles = {
     display: "flex",
-    justifyContent: "space-between",
-    maxWidth: "60%",
-    mt: 5,
-    position: "absolute",
-    right: "5%",
-    transition: "200ms",
-    top: top,
+    margin: "15vmin auto",
+    justifyContent: "center",
   };
   return (
     <Box>
@@ -101,13 +98,16 @@ const AddContact = () => {
           variant="contained"
           theme={indigoTheme}
           sx={{ mx: 2 }}
-          onClick={() => handleSave(contact)}
+          onClick={() => {
+            handleSave(contact);
+            navigate("/");
+          }}
         >
           Create
         </Button>
         {alert ? (
           <Alert severity="warning" sx={alertStyle}>
-            Odin input ili neskolko inputov nety
+            Odin input pustoi
           </Alert>
         ) : (
           ""
