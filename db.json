@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "name": "Замир",
+      "surname": "Урмат",
+      "phone": "oh no",
+      "id": 4
+    },
+    {
+      "name": "Jika",
+      "surname": "Jibek",
+      "phone": "123456789",
+      "id": 5
+    }
+  ]
+}
